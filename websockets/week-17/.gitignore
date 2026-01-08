@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+/vendor/
+
+# Environment variables and sensitive data
+.env
+.env.local
+*.key
+*.pem
+/config/secrets.*
+/credentials.*
+
+# Build artifacts, compiled files, and temporary files
+/build/
+/dist/
+/out/
+/target/
+*.log
+*.tmp
+/logs/
+npm-debug.log*
+
+# IDE and OS specific files
+.idea/
+.vscode/
+*.suo
+*.user
+*.config.user
+*.iml
+.DS_Store
+Thumbs.db
