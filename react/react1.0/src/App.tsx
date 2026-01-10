@@ -1,38 +1,37 @@
-import { useRef, useEffect } from 'react';
-
-
-// function App() {
-// const [count , setCount ] = useState(0);
-// const myref = useRef(0);
-
-
-// function handleClick(){
-// setCount(5);
-// myref.current = 7;
-// console.log(`myref.current value is  ${myref.current}`)
-// }
-
-//   return (
-//     <>
-//       <p>count: {count}</p>
-//       <p>Ref Value: {myref.current}</p>
-//        <button onClick={handleClick}>Update Values</button>
-//     </>
-//   )
-// }
-
-// export default App
-
-function App(){
-const inputRef = useRef<HTMLInputElement>(null);
-
- useEffect(()=>{
-  inputRef.current?.focus();
-}, [] )
-
-return(<>
-<input type="text" ref={inputRef}/>
-<button>login</button>
-</>)
+interface book {
+  title: string,
+  author: string,
+  pages: number,
+  price: number
 }
+function Book(props: book){
+  
+  return(<>
+  <h3>{props.title}</h3>
+    <h4>By: {props.author}</h4>
+    <p>pages:{props.pages}</p>
+    <p>price:${props.price}</p>
+
+  </>)
+}
+
+
+function App() {
+
+  return (
+    <>
+     <div>
+      <h1>my book collection</h1>
+      <Book title="the fire in the ice "
+       author="Ayush"
+       pages={339} 
+       price={33} />
+     </div>
+    </>
+  )
+}
+
+
+
+
 export default App
