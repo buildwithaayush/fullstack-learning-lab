@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { PrismaClient } from "@/generated/prisma";
+const prismaClient = new PrismaClient();
 
 export async function POST(req: NextRequest){
     const data = await req.json();
