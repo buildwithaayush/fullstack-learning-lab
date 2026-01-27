@@ -9,3 +9,23 @@ export default async function Blogpost({params,}:{params:Promise<{postId: string
        <div>{data.body}</div>
        </>)
 }
+
+//rendering 
+// the process of creating html that need to dumped into the dom 
+
+// static site generation 
+
+
+
+//client side rendering 
+//it means jo aapko browser hai usme rendering ho rhi hai. in 
+//react there is heavy client side rendering 
+//simple counter is a client side rendering
+
+
+
+// server side rendering 
+
+
+
+//server components
